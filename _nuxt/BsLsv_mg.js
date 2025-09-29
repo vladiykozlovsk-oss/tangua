@@ -1,0 +1,1 @@
+import{ad as o}from"./B2d9bXMy.js";import{u as i}from"./DgDz-Izd.js";const u=o((t,e)=>t.fullPath===e.fullPath?void 0:(i().setTransition(!0),new Promise(r=>{setTimeout(()=>{r()},300)})));export{u as default};
