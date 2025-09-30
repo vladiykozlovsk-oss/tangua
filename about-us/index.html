@@ -20,7 +20,21 @@
           <span class="sr-only" data-i18n="brand.name">TANGUA A.S.</span>
           <img src="../logotangua.PNG" alt="TANGUA A.S. logo" />
         </a>
-        <nav class="nav" aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation"
+          data-i18n-label="nav.toggle"
+        >
+          <span class="nav-toggle__icon" aria-hidden="true">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </span>
+        </button>
+        <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
           <ul class="nav__list">
             <li><a class="nav__link" href="../index.html" data-i18n="nav.home">Home</a></li>
             <li><a class="nav__link" href="../about-us/index.html" data-i18n="nav.about" aria-current="page">About</a></li>
@@ -28,12 +42,14 @@
             <li><a class="nav__link" href="../creating-value/index.html" data-i18n="nav.value">Value</a></li>
             <li><a class="nav__link" href="../contact-us/index.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
+          <div class="nav__extras">
+            <div class="language-toggle" role="group" aria-label="Language selector">
+              <button type="button" class="language-toggle__button" data-lang="en" aria-pressed="true">English</button>
+              <button type="button" class="language-toggle__button" data-lang="pl" aria-pressed="false">Polski</button>
+              <button type="button" class="language-toggle__button" data-lang="cs" aria-pressed="false">Čeština</button>
+            </div>
+          </div>
         </nav>
-        <div class="language-toggle" role="group" aria-label="Language selector">
-          <button type="button" class="language-toggle__button" data-lang="en" aria-pressed="true">English</button>
-          <button type="button" class="language-toggle__button" data-lang="pl" aria-pressed="false">Polski</button>
-          <button type="button" class="language-toggle__button" data-lang="cs" aria-pressed="false">Čeština</button>
-        </div>
       </div>
     </header>
 
@@ -229,12 +245,14 @@
       <div class="footer__upper">
         <div class="container footer__grid">
           <div class="footer__brand">
-            <a class="footer__logo" href="../index.html">
-              <img src="../logotanguawhite.png" alt="TANGUA A.S. logo" />
-            </a>
-            <div class="footer__brand-legend">
-              <span data-i18n="brand.name">TANGUA A.S.</span>
-              <span class="footer__brand-sub" data-i18n="brand.tagline">Renewable Biomass Group</span>
+            <div class="footer__brand-head">
+              <a class="footer__logo" href="../index.html">
+                <img src="../logotanguawhite.png" alt="TANGUA A.S. logo" />
+              </a>
+              <div class="footer__brand-legend">
+                <span data-i18n="brand.name">TANGUA A.S.</span>
+                <span class="footer__brand-sub" data-i18n="brand.tagline">Renewable Biomass Group</span>
+              </div>
             </div>
             <p data-i18n="footer.summary">
               We design reliable biomass supply chains with measurable sustainability performance for utilities, traders, and industrial energy users.
@@ -245,7 +263,6 @@
             <a href="../about-us/index.html" data-i18n="nav.about">About</a>
             <a href="../products/index.html" data-i18n="nav.products">Products</a>
             <a href="../creating-value/index.html" data-i18n="nav.value">Value</a>
-            <a href="../family-owned-legacy/index.html" data-i18n="footer.legacy">Legacy</a>
           </div>
           <div class="footer__links">
             <strong data-i18n="footer.connect">Connect</strong>
@@ -274,7 +291,8 @@
             "about": "About",
             "products": "Products",
             "value": "Value",
-            "contact": "Contact"
+            "contact": "Contact",
+            "toggle": "Toggle navigation"
           },
           "hero": {
             "eyebrow": "About us",
@@ -339,7 +357,6 @@
             "summary": "We design reliable biomass supply chains with measurable sustainability performance for utilities, traders, and industrial energy users.",
             "navigate": "Navigate",
             "connect": "Connect",
-            "legacy": "Heritage",
             "contact": "Contact form",
             "privacy": "Privacy Policy",
             "terms": "Terms & Conditions",
@@ -355,7 +372,8 @@
             "about": "O nas",
             "products": "Produkty",
             "value": "Wartość",
-            "contact": "Kontakt"
+            "contact": "Kontakt",
+            "toggle": "Przełącz nawigację"
           },
           "hero": {
             "eyebrow": "O nas",
@@ -420,7 +438,6 @@
             "summary": "Projektujemy niezawodne łańcuchy dostaw biomasy z mierzalną skutecznością zrównoważonego rozwoju dla energetyki i przemysłu.",
             "navigate": "Nawigacja",
             "connect": "Kontakt",
-            "legacy": "Dziedzictwo",
             "contact": "Formularz kontaktowy",
             "privacy": "Polityka prywatności",
             "terms": "Regulamin",
@@ -436,7 +453,8 @@
             "about": "O nás",
             "products": "Produkty",
             "value": "Hodnota",
-            "contact": "Kontakt"
+            "contact": "Kontakt",
+            "toggle": "Přepnout navigaci"
           },
           "hero": {
             "eyebrow": "O nás",
@@ -501,7 +519,6 @@
             "summary": "Navrhujeme spolehlivé dodavatelské řetězce biomasy s měřitelnou udržitelností pro energetiku a průmysl.",
             "navigate": "Navigace",
             "connect": "Spojení",
-            "legacy": "Dědictví",
             "contact": "Kontaktní formulář",
             "privacy": "Zásady ochrany osobních údajů",
             "terms": "Podmínky",

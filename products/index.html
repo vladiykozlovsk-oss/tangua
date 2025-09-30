@@ -20,7 +20,21 @@
           <span class="sr-only" data-i18n="brand.name">TANGUA A.S.</span>
           <img src="../logotangua.PNG" alt="TANGUA A.S. logo" />
         </a>
-        <nav class="nav" aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation"
+          data-i18n-label="nav.toggle"
+        >
+          <span class="nav-toggle__icon" aria-hidden="true">
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </span>
+        </button>
+        <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
           <ul class="nav__list">
             <li><a class="nav__link" href="../index.html" data-i18n="nav.home">Home</a></li>
             <li><a class="nav__link" href="../about-us/index.html" data-i18n="nav.about">About</a></li>
@@ -28,12 +42,14 @@
             <li><a class="nav__link" href="../creating-value/index.html" data-i18n="nav.value">Value</a></li>
             <li><a class="nav__link" href="../contact-us/index.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
+          <div class="nav__extras">
+            <div class="language-toggle" role="group" aria-label="Language selector">
+              <button type="button" class="language-toggle__button" data-lang="en" aria-pressed="true">English</button>
+              <button type="button" class="language-toggle__button" data-lang="pl" aria-pressed="false">Polski</button>
+              <button type="button" class="language-toggle__button" data-lang="cs" aria-pressed="false">Čeština</button>
+            </div>
+          </div>
         </nav>
-        <div class="language-toggle" role="group" aria-label="Language selector">
-          <button type="button" class="language-toggle__button" data-lang="en" aria-pressed="true">English</button>
-          <button type="button" class="language-toggle__button" data-lang="pl" aria-pressed="false">Polski</button>
-          <button type="button" class="language-toggle__button" data-lang="cs" aria-pressed="false">Čeština</button>
-        </div>
       </div>
     </header>
 
@@ -48,6 +64,82 @@
           <p class="hero__subtitle" data-i18n="hero.subtitle">
             Our catalogue spans premium pellets, industrial fuels, biogenic aggregates, and specialised services that keep biomass programmes running smoothly.
           </p>
+        </div>
+      </section>
+
+      <section class="section section--surface-alt product-carousel">
+        <div class="container" data-animate="up">
+          <div class="section__eyebrow" data-i18n="gallery.eyebrow">Material gallery</div>
+          <h2 class="section__title" data-i18n="gallery.title">Signature feedstocks curating our biomass portfolio</h2>
+          <p class="section__lead" data-i18n="gallery.lead">
+            Swipe through recent lots sourced for premium and industrial clients - each card highlights the fuel traits our operations teams track.
+          </p>
+          <div class="product-carousel__viewport" data-carousel>
+            <div class="product-carousel__scroller" data-carousel-track role="list">
+              <article class="product-card" role="listitem">
+                <figure class="product-card__media">
+                  <img src="../products-111/Cashew-Nut-Shell-337x488.jpg%EF%B9%96v=a9209a137f33145.webp" alt="Cashew nut shell pellet sample" loading="lazy" />
+                </figure>
+                <div class="product-card__body">
+                  <h3 class="product-card__title" data-i18n="gallery.cards.cashew.title">Cashew Nut Shell</h3>
+                  <p class="product-card__copy" data-i18n="gallery.cards.cashew.copy">Cashew shell pellets delivering high energy density</p>
+                </div>
+              </article>
+              <article class="product-card" role="listitem">
+                <figure class="product-card__media">
+                  <img src="../products-111/NEW-Olive-Cake-RGB-2560px-337x488.jpg%EF%B9%96v=a9209a137f33145.webp" alt="Olive cake pellet sample" loading="lazy" />
+                </figure>
+                <div class="product-card__body">
+                  <h3 class="product-card__title" data-i18n="gallery.cards.oliveCake.title">Olive Cake</h3>
+                  <p class="product-card__copy" data-i18n="gallery.cards.oliveCake.copy">Pressed olive cake pellets with steady combustion</p>
+                </div>
+              </article>
+              <article class="product-card" role="listitem">
+                <figure class="product-card__media">
+                  <img src="../products-111/Olive-pits-RGB-2560px-337x488.jpg%EF%B9%96v=a9209a137f33145.webp" alt="Olive pits sample" loading="lazy" />
+                </figure>
+                <div class="product-card__body">
+                  <h3 class="product-card__title" data-i18n="gallery.cards.olivePits.title">Olive Pits</h3>
+                  <p class="product-card__copy" data-i18n="gallery.cards.olivePits.copy">Low-ash olive pits for combined heat and power</p>
+                </div>
+              </article>
+              <article class="product-card" role="listitem">
+                <figure class="product-card__media">
+                  <img src="../products-111/Premium-Industri-RGB-2560px-337x488.jpg%EF%B9%96v=a9209a137f33145.webp" alt="Premium industrial blend sample" loading="lazy" />
+                </figure>
+                <div class="product-card__body">
+                  <h3 class="product-card__title" data-i18n="gallery.cards.premiumBlend.title">Premium Industrial Blend</h3>
+                  <p class="product-card__copy" data-i18n="gallery.cards.premiumBlend.copy">Dense industrial blend engineered for stable output</p>
+                </div>
+              </article>
+              <article class="product-card" role="listitem">
+                <figure class="product-card__media">
+                  <img src="../products-111/Sugar-cane-2560px-2-337x488.jpg%EF%B9%96v=a9209a137f33145.webp" alt="Sugar cane fibre sample" loading="lazy" />
+                </figure>
+                <div class="product-card__body">
+                  <h3 class="product-card__title" data-i18n="gallery.cards.sugarCane.title">Sugar Cane Pellet</h3>
+                  <p class="product-card__copy" data-i18n="gallery.cards.sugarCane.copy">Refined sugar cane residue with low moisture</p>
+                </div>
+              </article>
+              <article class="product-card" role="listitem">
+                <figure class="product-card__media">
+                  <img src="../products-111/Sunflower-husk-RGB-2560px-337x488.jpg%EF%B9%96v=a9209a137f33145.webp" alt="Sunflower husk sample" loading="lazy" />
+                </figure>
+                <div class="product-card__body">
+                  <h3 class="product-card__title" data-i18n="gallery.cards.sunflower.title">Sunflower Husk</h3>
+                  <p class="product-card__copy" data-i18n="gallery.cards.sunflower.copy">Sunflower husk pellets delivering balanced calorific value</p>
+                </div>
+              </article>
+            </div>
+            <div class="product-carousel__controls">
+              <button class="product-carousel__control" type="button" data-carousel-prev aria-label="Previous" disabled>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M11.8 4.3 7 10l4.8 5.7-1.6 1.3-6.1-7 6.1-7 1.6 1.3Z" fill="currentColor" /></svg>
+              </button>
+              <button class="product-carousel__control" type="button" data-carousel-next aria-label="Next">
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8.2 4.3 4.8 5.7-4.8 5.7 1.6 1.3 6.1-7-6.1-7-1.6 1.3Z" fill="currentColor" /></svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -209,12 +301,14 @@
       <div class="footer__upper">
         <div class="container footer__grid">
           <div class="footer__brand">
-            <a class="footer__logo" href="../index.html">
-              <img src="../logotanguawhite.png" alt="TANGUA A.S. logo" />
-            </a>
-            <div class="footer__brand-legend">
-              <span data-i18n="brand.name">TANGUA A.S.</span>
-              <span class="footer__brand-sub" data-i18n="brand.tagline">Renewable Biomass Group</span>
+            <div class="footer__brand-head">
+              <a class="footer__logo" href="../index.html">
+                <img src="../logotanguawhite.png" alt="TANGUA A.S. logo" />
+              </a>
+              <div class="footer__brand-legend">
+                <span data-i18n="brand.name">TANGUA A.S.</span>
+                <span class="footer__brand-sub" data-i18n="brand.tagline">Renewable Biomass Group</span>
+              </div>
             </div>
             <p data-i18n="footer.summary">
               We design reliable biomass supply chains with measurable sustainability performance for utilities, traders, and industrial energy users.
@@ -225,7 +319,6 @@
             <a href="../about-us/index.html" data-i18n="nav.about">About</a>
             <a href="../products/index.html" data-i18n="nav.products">Products</a>
             <a href="../creating-value/index.html" data-i18n="nav.value">Value</a>
-            <a href="../family-owned-legacy/index.html" data-i18n="footer.legacy">Legacy</a>
           </div>
           <div class="footer__links">
             <strong data-i18n="footer.connect">Connect</strong>
@@ -254,12 +347,26 @@
             "about": "About",
             "products": "Products",
             "value": "Value",
-            "contact": "Contact"
+            "contact": "Contact",
+            "toggle": "Toggle navigation"
           },
           "hero": {
             "eyebrow": "Products",
             "title": "Certified biomass tailored to every combustion profile",
             "subtitle": "Our catalogue spans premium pellets, industrial fuels, biogenic aggregates, and specialised services that keep biomass programmes running smoothly."
+          },
+          "gallery": {
+            "eyebrow": "Material gallery",
+            "title": "Signature feedstocks curating our biomass portfolio",
+            "lead": "Swipe through recent lots sourced for premium and industrial clients - each card highlights the fuel traits our operations teams track.",
+            "cards": {
+              "cashew": {"title": "Cashew Nut Shell", "copy": "Cashew shell pellets delivering high energy density"},
+              "oliveCake": {"title": "Olive Cake", "copy": "Pressed olive cake pellets with steady combustion"},
+              "olivePits": {"title": "Olive Pits", "copy": "Low-ash olive pits for combined heat and power"},
+              "premiumBlend": {"title": "Premium Industrial Blend", "copy": "Dense industrial blend engineered for stable output"},
+              "sugarCane": {"title": "Sugar Cane Pellet", "copy": "Refined sugar cane residue with low moisture"},
+              "sunflower": {"title": "Sunflower Husk", "copy": "Sunflower husk pellets delivering balanced calorific value"}
+            }
           },
           "portfolio": {
             "eyebrow": "Portfolio",
@@ -322,7 +429,6 @@
             "summary": "We design reliable biomass supply chains with measurable sustainability performance for utilities, traders, and industrial energy users.",
             "navigate": "Navigate",
             "connect": "Connect",
-            "legacy": "Heritage",
             "contact": "Contact form",
             "privacy": "Privacy Policy",
             "terms": "Terms & Conditions",
@@ -338,12 +444,26 @@
             "about": "O nas",
             "products": "Produkty",
             "value": "Wartość",
-            "contact": "Kontakt"
+            "contact": "Kontakt",
+            "toggle": "Przełącz nawigację"
           },
           "hero": {
             "eyebrow": "Produkty",
             "title": "Certyfikowana biomasa dopasowana do każdego profilu spalania",
             "subtitle": "Nasze portfolio obejmuje pelety premium, paliwa przemysłowe, frakcje biogeniczne oraz usługi wspierające stabilność programów biomasy."
+          },
+          "gallery": {
+            "eyebrow": "Galeria materiałów",
+            "title": "Kluczowe surowce w naszym portfolio biomasy",
+            "lead": "Przesuń, aby zobaczyć ostatnie partie dla klientów premium i przemysłowych - każda karta podkreśla cechy paliwa ważne dla operacji.",
+            "cards": {
+              "cashew": {"title": "Łupina orzecha nerkowca", "copy": "Pelety z łupin nerkowca o wysokiej wartości opałowej"},
+              "oliveCake": {"title": "Wytłoki z oliwek", "copy": "Sprasowane pelety z wytłoków zapewniające stabilne spalanie"},
+              "olivePits": {"title": "Pestki oliwek", "copy": "Niskopopiołowe pestki oliwek do układów kogeneracyjnych"},
+              "premiumBlend": {"title": "Mieszanka przemysłowa premium", "copy": "Gęsta mieszanka przemysłowa zaprojektowana dla stabilnej mocy"},
+              "sugarCane": {"title": "Pellet z trzciny cukrowej", "copy": "Rafinowane pozostałości z trzciny o niskiej wilgotności"},
+              "sunflower": {"title": "Łuska słonecznika", "copy": "Pelety z łuski słonecznika o zrównoważonej wartości opałowej"}
+            }
           },
           "portfolio": {
             "eyebrow": "Portfolio",
@@ -406,7 +526,6 @@
             "summary": "Projektujemy niezawodne łańcuchy dostaw biomasy z mierzalną skutecznością zrównoważonego rozwoju dla energetyki i przemysłu.",
             "navigate": "Nawigacja",
             "connect": "Kontakt",
-            "legacy": "Dziedzictwo",
             "contact": "Formularz kontaktowy",
             "privacy": "Polityka prywatności",
             "terms": "Regulamin",
@@ -422,12 +541,26 @@
             "about": "O nás",
             "products": "Produkty",
             "value": "Hodnota",
-            "contact": "Kontakt"
+            "contact": "Kontakt",
+            "toggle": "Přepnout navigaci"
           },
           "hero": {
             "eyebrow": "Produkty",
             "title": "Certifikovaná biomasa přizpůsobená každému spalovacímu profilu",
             "subtitle": "Naše nabídka zahrnuje pelety premium, průmyslová paliva, biogenní směsi i služby, které zajišťují hladký chod programů biomasy."
+          },
+          "gallery": {
+            "eyebrow": "Galerie materiálů",
+            "title": "Klíčové suroviny v našem portfoliu biomasy",
+            "lead": "Prohlédněte si poslední šarže pro prémiové i průmyslové zákazníky - každá karta zvýrazňuje vlastnosti paliva pro provozní týmy.",
+            "cards": {
+              "cashew": {"title": "Skořápky kešu", "copy": "Pelety z kešu s vysokou energetickou hustotou"},
+              "oliveCake": {"title": "Olivový koláč", "copy": "Lisované pelety z olivových výlisků se stabilním spalováním"},
+              "olivePits": {"title": "Pecky z oliv", "copy": "Nízkopopolové olivové pecky pro kogenerační jednotky"},
+              "premiumBlend": {"title": "Prémiová průmyslová směs", "copy": "Hustá průmyslová směs navržená pro stabilní výkon"},
+              "sugarCane": {"title": "Pellet z cukrové třtiny", "copy": "Rafinovaný zbytek z cukrové třtiny s nízkou vlhkostí"},
+              "sunflower": {"title": "Slunečnicová slupka", "copy": "Pelety ze slunečnicových slupek se vyváženou výhřevností"}
+            }
           },
           "portfolio": {
             "eyebrow": "Portfolio",
@@ -490,7 +623,6 @@
             "summary": "Navrhujeme spolehlivé dodavatelské řetězce biomasy s měřitelnou udržitelností pro energetiku a průmysl.",
             "navigate": "Navigace",
             "connect": "Spojení",
-            "legacy": "Dědictví",
             "contact": "Kontaktní formulář",
             "privacy": "Zásady ochrany osobních údajů",
             "terms": "Podmínky",
